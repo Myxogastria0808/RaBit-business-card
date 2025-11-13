@@ -35,9 +35,8 @@ jobs:
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-          workingDirectory: "."
           command: |
-            versions upload --message "Deployed a Preview by GitHub Actions: branch ${{ github.ref_name }}"
+            nix develop --command bash -c "pnpm i && wrangler versions upload --message \"Deployed a Preview by GitHub Actions: branch ${{ github.ref_name }}\""
       - name: Create Preview Summary File (Success Pattern)
         id: create-success-summary
         env:
