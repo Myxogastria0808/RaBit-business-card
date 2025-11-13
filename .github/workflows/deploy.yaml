@@ -1,4 +1,4 @@
-name: deploy-frontend
+name: deploy
 
 permissions:
   contents: read
@@ -10,7 +10,7 @@ on:
   workflow_dispatch:
 
 jobs:
-  deploy-frontend:
+  deploy:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout

@@ -1,4 +1,4 @@
-name: preview-frontend
+name: preview
 
 permissions:
   contents: write
@@ -10,7 +10,7 @@ on:
   workflow_dispatch:
 
 jobs:
-  preview-frontend:
+  preview:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
