@@ -4,7 +4,7 @@
  */
 {
   "$schema": "node_modules/wrangler/config-schema.json",
-  "name": "patient-truth-f9c9",
+  "name": "rabit-business-card",
   "main": "./.output/server/index.mjs",
   "compatibility_date": "2025-11-11",
   "compatibility_flags": ["nodejs_compat"],

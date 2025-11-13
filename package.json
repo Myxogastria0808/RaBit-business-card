@@ -1,5 +1,5 @@
 {
-  "name": "whatacotton-business-card",
+  "name": "rabit-business-card",
   "type": "module",
   "scripts": {
     "dev": "vinxi dev",
