@@ -23,10 +23,15 @@ jobs:
       # Build
       - name: Build
         run: nix develop --command bash -c "pnpm i && pnpm run build"
+      # Install pnpm
+      - name: Install pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          run_install: false
       # Deploy Frontend to Cloudflare Workers
       - name: Deploy Frontend to Cloudflare Workers
         uses: cloudflare/wrangler-action@v3
         with:
-          wranglerVersion: "4.45.3"
+          wranglerVersion: "4.48.0"
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
