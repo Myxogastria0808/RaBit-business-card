@@ -24,11 +24,11 @@ jobs:
       - name: Build
         id: build
         run: nix develop --command bash -c "pnpm i && pnpm run build"
-      # Install Node.js and pnpm
-      - name: Install pnpm
-        uses: pnpm/action-setup@v4
-        with:
-          run_install: false
+      # Install pnpm
+      # - name: Install pnpm
+      #   uses: pnpm/action-setup@v4
+      #   with:
+      #     run_install: false
       # Deploy Preview to Cloudflare Workers
       # Ref: https://zenn.dev/lalalatotoro/articles/b8fa632b53d332
       # Ref: https://zenn.dev/nikomaru/articles/0cea1b1e2fd4f2
